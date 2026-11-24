@@ -1,9 +1,9 @@
-import { Controller, Get, HttpStatus } from '@nestjs/common';
-import { AppService } from './app.service.js';
-import { ApiResponse } from '@nestjs/swagger';
+import { Controller, Get, HttpStatus } from '@nestjs/common'
+import { ApiResponse } from '@nestjs/swagger'
+import { AppService } from './app.service.js'
 
 @Controller({
-  version: '1'
+  version: '1',
 })
 export class AppController {
   constructor(private readonly appService: AppService) {}
@@ -22,6 +22,6 @@ export class AppController {
     },
   })
   getHealthCheck(): { message: string } {
-    return this.appService.getHealthCheck();
+    return this.appService.getHealthCheck()
   }
 }
